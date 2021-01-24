@@ -1,0 +1,16 @@
+.searchContainer {
+  position: relative;
+}
+
+.searchContainer > div {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+@media (min-width: 768px) {
+  width: 255px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+
+.header {
+  background-color: $primaryColor;
+  width: 100%;
+}
+
+.categoryMenu {
+  position: relative;
+}
