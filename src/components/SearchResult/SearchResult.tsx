@@ -1,18 +1,18 @@
 import React, {ReactElement } from 'react'
+import { IProduct } from '../../definitions/product'
 
-import products from '../../database/products.json'
 import ProductCard from '../ProductCard'
 
 import styles from './SearchResult.module.css'
 
 type Props = {
-    keyword: string
+    items: IProduct[]
 }
 
-export default function SearchResult(): ReactElement {
+export default function SearchResult({ items}: Props): ReactElement {
     return (
         <div className={styles.grid}>
-            {products.map(item => (
+            {items.map(item => (
                 <div key={item.id} className={styles.card}>
                     <ProductCard {...item} />
                 </div>

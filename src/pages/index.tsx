@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import SearchResult from '../components/SearchResult'
+import { useSearch } from '../hooks/useSearch'
 import styles from '../styles/App.module.css'
 
 export default function Home() {
+    const {results} = useSearch()
     return (
         <div className={styles.container}>
             <Head>
@@ -11,7 +13,7 @@ export default function Home() {
             </Head>
 
             <main className={styles.main}>
-                <SearchResult />
+                <SearchResult items={results} />
             </main>
 
             <footer className={styles.footer} />
