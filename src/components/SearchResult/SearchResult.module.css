@@ -1,0 +1,30 @@
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 3rem;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.card {
+  flex-basis: 100%;
+  padding: 1rem 0.5rem;
+}
+
+.grid .card + .grid .card {
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    flex-direction: row;
+  }
+
+  .card {
+    flex-basis: 50%;
+  }
+}
