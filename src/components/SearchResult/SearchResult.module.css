@@ -1,7 +1,5 @@
 .grid {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   max-width: 800px;
@@ -11,8 +9,12 @@
 }
 
 .card {
-  flex-basis: 100%;
+  width: 100%;
   padding: 1rem 0.5rem;
+}
+
+.card > a {
+  height: 100%;
 }
 
 .grid .card + .grid .card {
@@ -25,6 +27,6 @@
   }
 
   .card {
-    flex-basis: 50%;
+    width: 50%;
   }
 }
