@@ -1,12 +1,19 @@
 {
   "name": "seven-delivery",
   "version": "0.1.0",
+  "builds": [
+    {
+        "src": "package.json",
+        "use": "@now/next"
+    }
+  ],
   "private": true,
   "main": "firebaseFunctions.js",
   "scripts": {
     "dev": "next src/",
     "build": "next build src/",
     "start": "next start src/",
+    "now-build": "next build",
     "serve": "npm run build && firebase emulators:start --only functions,hosting",
     "shell": "npm run build && firebase functions:shell",
     "deploy": "firebase deploy --only functions,hosting",
