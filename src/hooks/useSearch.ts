@@ -12,9 +12,15 @@ export const useSearch = (): {
     const [error, setError] = useState();
 
     useEffect(() => {
-        fetch(ROUTES.API_SEARCH)
-            .then(result => result.json())
-            .then(result => setData(Object.values(result)))
+        fetch(ROUTES.API_GRAPHQL, {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify({ query: '{ products { name number } }' }),
+        })
+            .then((res) => res.json())
+            .then((json) => setData(json.data.products))
             .catch((err) => setError(err));
     }, [])
 

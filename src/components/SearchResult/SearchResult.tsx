@@ -13,7 +13,7 @@ export default function SearchResult({ items}: Props): ReactElement {
     return (
         <div className={styles.grid}>
             {items.map(item => (
-                <div key={item.id} className={styles.card}>
+                <div key={item.number} className={styles.card}>
                     <ProductCard {...item} />
                 </div>
             ))}

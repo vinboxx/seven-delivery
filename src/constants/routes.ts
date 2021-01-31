@@ -1,3 +1,3 @@
 export const ROUTES = {
-    API_SEARCH: 'api/search'
+    API_GRAPHQL: '/api/graphql'
 }
