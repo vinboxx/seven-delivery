@@ -35,4 +35,10 @@
 .number {
   line-height: 1.5;
   font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card:hover .number {
+  opacity: 1;
 }
